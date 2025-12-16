@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SOSTECH | Servicio Técnico</title>
 
-  <!-- ICONOS PROFESIONALES -->
+  <!-- ICONOS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
   <style>
@@ -30,12 +30,10 @@
     header h1 {
       margin: 5px 0;
       font-size: 2.2em;
-      letter-spacing: 1px;
     }
 
     header p {
       margin: 0;
-      font-size: 1.1em;
       opacity: 0.9;
     }
 
@@ -61,6 +59,12 @@
       padding: 22px;
       border-radius: 14px;
       box-shadow: 0 8px 20px rgba(0,0,0,0.35);
+      cursor: pointer;
+      transition: transform 0.2s;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
     }
 
     .card i {
@@ -69,57 +73,33 @@
       margin-bottom: 10px;
     }
 
-    .card img {
-      width: 70px;
-      margin-bottom: 10px;
+    /* BOTONES FLOTANTES */
+    .floating {
+      position: fixed;
+      right: 15px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      bottom: 20px;
+      z-index: 1000;
     }
 
-    .card h3 {
-      margin: 10px 0 5px;
-    }
-
-    /* GALERIA */
-    .galeria {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 15px;
-    }
-
-    .galeria img {
-      width: 100%;
-      border-radius: 12px;
+    .float-btn {
+      width: 55px;
+      height: 55px;
+      border-radius: 50%;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5em;
+      text-decoration: none;
       box-shadow: 0 5px 15px rgba(0,0,0,0.4);
     }
 
-    .contacto {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 15px;
-      margin-top: 20px;
-    }
-
-    .btn {
-      padding: 12px 18px;
-      border-radius: 30px;
-      text-decoration: none;
-      color: white;
-      font-weight: bold;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      transition: transform 0.2s, opacity 0.2s;
-    }
-
-    .btn:hover {
-      transform: scale(1.05);
-      opacity: 0.9;
-    }
-
-    .whatsapp { background: #25D366; }
-    .instagram { background: #E1306C; }
-    .facebook { background: #1877F2; }
-    .tiktok { background: #000; }
+    .wpp { background: #25D366; }
+    .ig { background: #E1306C; }
+    .fb { background: #1877F2; }
 
     footer {
       background: #020617;
@@ -134,7 +114,7 @@
 <body>
 
 <header>
-  <img src="logo.png" alt="Logo SOSTECH" class="logo">
+  <img src="logo.png" class="logo">
   <h1>SOSTECH</h1>
   <p>Tecnología que se repara</p>
 </header>
@@ -142,98 +122,53 @@
 <section>
   <h2>Servicios Técnicos</h2>
   <div class="servicios">
-
-    <div class="card">
-      <i class="fa-solid fa-motorcycle"></i>
-      <h3>Motos eléctricas</h3>
-      <p>Diagnóstico y reparación.</p>
-    </div>
-
-    <div class="card">
-      <i class="fa-solid fa-tv"></i>
-      <h3>Televisores</h3>
-      <p>Fallas electrónicas.</p>
-    </div>
-
-    <div class="card">
-      <i class="fa-solid fa-laptop"></i>
-      <h3>Computadoras</h3>
-      <p>Hardware y software.</p>
-    </div>
-
-    <div class="card">
-      <i class="fa-solid fa-mobile-screen-button"></i>
-      <h3>Celulares</h3>
-      <p>Mantenimiento.</p>
-    </div>
-
+    <div class="card"><i class="fa-solid fa-motorcycle"></i><h3>Motos eléctricas</h3></div>
+    <div class="card"><i class="fa-solid fa-tv"></i><h3>Televisores</h3></div>
+    <div class="card"><i class="fa-solid fa-laptop"></i><h3>Computadoras</h3></div>
+    <div class="card"><i class="fa-solid fa-mobile-screen-button"></i><h3>Celulares</h3></div>
   </div>
 </section>
 
-<!-- ✅ RECARGAS DE JUEGOS (YA FUNCIONA) -->
 <section>
   <h2>Recargas de Juegos</h2>
   <div class="servicios">
 
-    <div class="card">
-      <!-- puedes cambiar el icono por imagen -->
+    <a class="card" href="https://wa.me/593979424814?text=Hola%2C%20vengo%20de%20SOSTECH%20y%20deseo%20una%20recarga%20de%20Free%20Fire.%0AMi%20ID%20es%3A" target="_blank">
       <i class="fa-solid fa-fire"></i>
-      <!-- <img src="freefire.png"> -->
       <h3>Free Fire</h3>
-    </div>
+    </a>
 
-    <div class="card">
+    <a class="card" href="https://wa.me/593979424814?text=Hola%2C%20vengo%20de%20SOSTECH%20y%20deseo%20una%20recarga%20de%20Roblox.%0AUsuario%3A%0AContrase%C3%B1a%3A" target="_blank">
       <i class="fa-solid fa-cube"></i>
-      <!-- <img src="roblox.png"> -->
       <h3>Roblox</h3>
-    </div>
+    </a>
 
-    <div class="card">
+    <a class="card" href="https://wa.me/593979424814?text=Hola%2C%20vengo%20de%20SOSTECH%20y%20deseo%20una%20recarga%20de%20Clash%20Royale.%0AUsuario%3A%0AContrase%C3%B1a%3A" target="_blank">
       <i class="fa-solid fa-chess-rook"></i>
       <h3>Clash Royale</h3>
-    </div>
-
-    <div class="card">
-      <i class="fa-solid fa-star"></i>
-      <h3>Brawl Stars</h3>
-    </div>
-
-  </div>
-</section>
-
-<section>
-  <h2>Nuestro Trabajo</h2>
-  <div class="galeria">
-    <img src="foto1.jpg">
-    <img src="foto2.jpg">
-    <img src="foto3.jpg">
-  </div>
-</section>
-
-<section>
-  <h2>Contáctanos</h2>
-  <div class="contacto">
-    <a class="btn whatsapp" href="https://wa.me/593979424814" target="_blank">
-      <i class="fa-brands fa-whatsapp"></i> WhatsApp
     </a>
 
-    <a class="btn instagram" href="https://www.instagram.com/sostech.lp" target="_blank">
-      <i class="fa-brands fa-instagram"></i> Instagram
-    </a>
-
-    <a class="btn facebook" href="https://www.facebook.com/sostechlp" target="_blank">
-      <i class="fa-brands fa-facebook"></i> Facebook
-    </a>
-
-    <a class="btn tiktok" href="#" target="_blank">
-      <i class="fa-brands fa-tiktok"></i> TikTok
-    </a>
   </div>
 </section>
 
 <footer>
   © 2025 SOSTECH | Servicio Técnico Especializado
 </footer>
+
+<!-- BOTONES FLOTANTES -->
+<div class="floating">
+  <a class="float-btn wpp" href="https://wa.me/593979424814?text=Hola%2C%20vengo%20de%20SOSTECH%20y%20deseo%20informaci%C3%B3n." target="_blank">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+
+  <a class="float-btn ig" href="https://www.instagram.com/sostech.lp" target="_blank">
+    <i class="fa-brands fa-instagram"></i>
+  </a>
+
+  <a class="float-btn fb" href="https://www.facebook.com/sostechlp" target="_blank">
+    <i class="fa-brands fa-facebook"></i>
+  </a>
+</div>
 
 </body>
 </html>
