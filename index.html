@@ -2,34 +2,80 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>SOSTECH - Servicios Tecnológicos</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SOSTECH | Soporte Técnico</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
-      background: #f4f4f4;
       margin: 0;
-      padding: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #0f172a;
+      color: #e5e7eb;
+      text-align: center;
     }
     header {
-      background: #0a3d62;
-      color: white;
-      padding: 20px;
-      text-align: center;
+      padding: 30px 15px;
+      background: linear-gradient(135deg, #2563eb, #1e40af);
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.2em;
+    }
+    header p {
+      margin-top: 10px;
+      font-size: 1.1em;
     }
     section {
-      padding: 20px;
+      padding: 30px 15px;
+      max-width: 900px;
+      margin: auto;
+    }
+    h2 {
+      color: #60a5fa;
+      margin-bottom: 15px;
+    }
+    .servicios {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 15px;
     }
     .card {
-      background: white;
-      padding: 15px;
-      margin: 10px 0;
-      border-radius: 8px;
+      background: #1e293b;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
     }
-    footer {
-      background: #222;
+    .card h3 {
+      margin-top: 0;
+      color: #38bdf8;
+    }
+    .contacto {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin-top: 20px;
+    }
+    .btn {
+      padding: 12px 18px;
+      border-radius: 30px;
+      text-decoration: none;
       color: white;
-      text-align: center;
-      padding: 10px;
+      font-weight: bold;
+      transition: transform 0.2s, opacity 0.2s;
+    }
+    .btn:hover {
+      transform: scale(1.05);
+      opacity: 0.9;
+    }
+    .whatsapp { background: #25D366; }
+    .instagram { background: #E1306C; }
+    .facebook { background: #1877F2; }
+    .tiktok { background: #000000; }
+    footer {
+      background: #020617;
+      padding: 15px;
+      font-size: 0.9em;
+      color: #94a3b8;
     }
   </style>
 </head>
@@ -37,28 +83,42 @@
 
 <header>
   <h1>SOSTECH</h1>
-  <p>Soluciones tecnológicas a tu alcance</p>
+  <p>Reparación, mantenimiento y servicios digitales</p>
 </header>
 
 <section>
-  <div class="card">
-    <h2>Servicios</h2>
-    <ul>
-      <li>Mantenimiento de computadoras</li>
-      <li>Soporte técnico</li>
-      <li>Instalación de software</li>
-    </ul>
+  <h2>Reparación y Mantenimiento</h2>
+  <div class="servicios">
+    <div class="card"><h3>Motos eléctricas</h3><p>Diagnóstico, reparación y mantenimiento general.</p></div>
+    <div class="card"><h3>Televisores</h3><p>Reparación de fallas eléctricas y electrónicas.</p></div>
+    <div class="card"><h3>Computadoras</h3><p>Soporte técnico, software y hardware.</p></div>
+    <div class="card"><h3>Teléfonos celulares</h3><p>Cambio de piezas, software y mantenimiento.</p></div>
   </div>
+</section>
 
-  <div class="card">
-    <h2>Contacto</h2>
-    <p>📞 WhatsApp: 09XXXXXXXX</p>
-    <p>📧 Email: sostech@email.com</p>
+<section>
+  <h2>Recargas de Juegos</h2>
+  <div class="servicios">
+    <div class="card"><h3>Free Fire</h3></div>
+    <div class="card"><h3>Roblox</h3></div>
+    <div class="card"><h3>Clash Royale</h3></div>
+    <div class="card"><h3>Brawl Stars</h3></div>
+  </div>
+</section>
+
+<section>
+  <h2>Contáctanos</h2>
+  <p>Escríbenos para consultas o cotizaciones</p>
+  <div class="contacto">
+    <a class="btn whatsapp" href="https://wa.me/593XXXXXXXXX" target="_blank">WhatsApp</a>
+    <a class="btn instagram" href="#">Instagram</a>
+    <a class="btn facebook" href="#">Facebook</a>
+    <a class="btn tiktok" href="#">TikTok</a>
   </div>
 </section>
 
 <footer>
-  <p>© 2025 SOSTECH</p>
+  © 2025 SOSTECH - Todos los derechos reservados
 </footer>
 
 </body>
