@@ -30,10 +30,12 @@
     header h1 {
       margin: 5px 0;
       font-size: 2.2em;
+      letter-spacing: 1px;
     }
 
     header p {
       margin: 0;
+      font-size: 1.1em;
       opacity: 0.9;
     }
 
@@ -59,7 +61,8 @@
       padding: 22px;
       border-radius: 14px;
       box-shadow: 0 8px 20px rgba(0,0,0,0.35);
-      cursor: pointer;
+      text-decoration: none;
+      color: #e5e7eb;
       transition: transform 0.2s;
     }
 
@@ -73,33 +76,22 @@
       margin-bottom: 10px;
     }
 
-    /* BOTONES FLOTANTES */
-    .floating {
-      position: fixed;
-      right: 15px;
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-      bottom: 20px;
-      z-index: 1000;
+    .card img {
+      width: 70px;
+      margin-bottom: 10px;
     }
 
-    .float-btn {
-      width: 55px;
-      height: 55px;
-      border-radius: 50%;
-      color: white;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.5em;
-      text-decoration: none;
+    .galeria {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 15px;
+    }
+
+    .galeria img {
+      width: 100%;
+      border-radius: 12px;
       box-shadow: 0 5px 15px rgba(0,0,0,0.4);
     }
-
-    .wpp { background: #25D366; }
-    .ig { background: #E1306C; }
-    .fb { background: #1877F2; }
 
     footer {
       background: #020617;
@@ -108,13 +100,41 @@
       color: #94a3b8;
       margin-top: 30px;
     }
+
+    /* BOTONES FLOTANTES */
+    .floating {
+      position: fixed;
+      right: 15px;
+      bottom: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      z-index: 1000;
+    }
+
+    .float-btn {
+      width: 55px;
+      height: 55px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5em;
+      color: white;
+      text-decoration: none;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+    }
+
+    .wpp { background: #25D366; }
+    .ig  { background: #E1306C; }
+    .fb  { background: #1877F2; }
   </style>
 </head>
 
 <body>
 
 <header>
-  <img src="logo.png" class="logo">
+  <img src="logo.png" alt="Logo SOSTECH" class="logo">
   <h1>SOSTECH</h1>
   <p>Tecnología que se repara</p>
 </header>
@@ -133,21 +153,36 @@
   <h2>Recargas de Juegos</h2>
   <div class="servicios">
 
-    <a class="card" href="https://wa.me/593979424814?text=Hola%2C%20vengo%20de%20SOSTECH%20y%20deseo%20una%20recarga%20de%20Free%20Fire.%0AMi%20ID%20es%3A" target="_blank">
-      <i class="fa-solid fa-fire"></i>
+    <a class="card"
+       href="https://wa.me/593979424814?text=Hola%2C%20vengo%20de%20SOSTECH%20y%20deseo%20una%20recarga%20de%20Free%20Fire.%0AMi%20ID%20es%3A"
+       target="_blank">
+      <img src="freefire.png" alt="Free Fire">
       <h3>Free Fire</h3>
     </a>
 
-    <a class="card" href="https://wa.me/593979424814?text=Hola%2C%20vengo%20de%20SOSTECH%20y%20deseo%20una%20recarga%20de%20Roblox.%0AUsuario%3A%0AContrase%C3%B1a%3A" target="_blank">
-      <i class="fa-solid fa-cube"></i>
+    <a class="card"
+       href="https://wa.me/593979424814?text=Hola%2C%20vengo%20de%20SOSTECH%20y%20deseo%20una%20recarga%20de%20Roblox.%0AUsuario%3A%0AContrase%C3%B1a%3A"
+       target="_blank">
+      <img src="roblox.png" alt="Roblox">
       <h3>Roblox</h3>
     </a>
 
-    <a class="card" href="https://wa.me/593979424814?text=Hola%2C%20vengo%20de%20SOSTECH%20y%20deseo%20una%20recarga%20de%20Clash%20Royale.%0AUsuario%3A%0AContrase%C3%B1a%3A" target="_blank">
-      <i class="fa-solid fa-chess-rook"></i>
+    <a class="card"
+       href="https://wa.me/593979424814?text=Hola%2C%20vengo%20de%20SOSTECH%20y%20deseo%20una%20recarga%20de%20Clash%20Royale.%0AUsuario%3A%0AContrase%C3%B1a%3A"
+       target="_blank">
+      <img src="clashroyale.png" alt="Clash Royale">
       <h3>Clash Royale</h3>
     </a>
 
+  </div>
+</section>
+
+<section>
+  <h2>Nuestro Trabajo</h2>
+  <div class="galeria">
+    <img src="trabajo1.jpg" alt="Trabajo 1">
+    <img src="trabajo2.jpg" alt="Trabajo 2">
+    <img src="trabajo3.jpg" alt="Trabajo 3">
   </div>
 </section>
 
@@ -157,15 +192,21 @@
 
 <!-- BOTONES FLOTANTES -->
 <div class="floating">
-  <a class="float-btn wpp" href="https://wa.me/593979424814?text=Hola%2C%20vengo%20de%20SOSTECH%20y%20deseo%20informaci%C3%B3n." target="_blank">
+  <a class="float-btn wpp"
+     href="https://wa.me/593979424814?text=Hola%2C%20vengo%20de%20SOSTECH%20y%20deseo%20informaci%C3%B3n."
+     target="_blank">
     <i class="fa-brands fa-whatsapp"></i>
   </a>
 
-  <a class="float-btn ig" href="https://www.instagram.com/sostech.lp" target="_blank">
+  <a class="float-btn ig"
+     href="https://www.instagram.com/sostech.lp"
+     target="_blank">
     <i class="fa-brands fa-instagram"></i>
   </a>
 
-  <a class="float-btn fb" href="https://www.facebook.com/sostechlp" target="_blank">
+  <a class="float-btn fb"
+     href="https://www.facebook.com/sostechlp"
+     target="_blank">
     <i class="fa-brands fa-facebook"></i>
   </a>
 </div>
