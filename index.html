@@ -17,25 +17,13 @@ body{
   text-align:center;
 }
 
-/* HEADER */
 header{
+  padding:35px 15px;
   background:linear-gradient(135deg,#2563eb,#1e40af);
-  padding:20px 15px 30px;
 }
 
-/* LOGO GRANDE */
 .logo{
-  width:100%;
-  max-height:180px;
-  object-fit:contain;
-  margin-bottom:10px;
-}
-
-/* SLOGAN */
-header p{
-  margin:0;
-  font-size:1.1em;
-  color:#e5e7eb;
+  width:90px;
 }
 
 section{
@@ -49,7 +37,7 @@ h2{
   margin-bottom:20px;
 }
 
-/* CONTENEDORES */
+/* CONTENEDOR DE LOS 3 CUADROS */
 .servicios{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
@@ -86,18 +74,11 @@ h2{
   opacity:1;
 }
 
-/* TITULO CARD */
+/* TEXTO */
 .card h3{
   margin:0;
   padding:12px;
   background:#020617;
-}
-
-footer{
-  padding:15px;
-  background:#020617;
-  color:#94a3b8;
-  font-size:.9em;
 }
 </style>
 </head>
@@ -105,10 +86,8 @@ footer{
 <body>
 
 <header>
-  <!-- LOGO -->
   <img src="logo.png" class="logo">
-
-  <!-- SLOGAN -->
+  <h1>SOSTECH</h1>
   <p>Reparamos la tecnología que mueve tu día</p>
 </header>
 
@@ -117,6 +96,7 @@ footer{
 
 <div class="servicios">
 
+  <!-- SLIDER 1 -->
   <div class="card slider">
     <img src="g1-1.jpg" class="active">
     <img src="g1-2.jpg">
@@ -124,6 +104,7 @@ footer{
     <h3>Computadoras y Laptops</h3>
   </div>
 
+  <!-- SLIDER 2 -->
   <div class="card slider">
     <img src="g2-1.jpg" class="active">
     <img src="g2-2.jpg">
@@ -131,6 +112,7 @@ footer{
     <h3>Motos Eléctricas</h3>
   </div>
 
+  <!-- SLIDER 3 -->
   <div class="card slider">
     <img src="g3-1.jpg" class="active">
     <img src="g3-2.jpg">
@@ -141,10 +123,11 @@ footer{
 </div>
 </section>
 
-<footer>
+<footer style="padding:15px;background:#020617;color:#94a3b8;">
 © 2025 SOSTECH | Servicio Técnico Especializado
 </footer>
 
+<!-- JAVASCRIPT (SIEMPRE AQUÍ ABAJO) -->
 <script>
 document.querySelectorAll('.slider').forEach(slider=>{
   const images=slider.querySelectorAll('img');
