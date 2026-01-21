@@ -20,16 +20,21 @@ body{
 /* ===== HEADER CON LOGO DE FONDO ===== */
 .hero{
   height:260px;
-  background:
-    linear-gradient(135deg,#2563eb,#1e40af),
-    url("logo.png");
-  background-repeat:no-repeat;
-  background-position:center;
-  background-size:contain;
+  background:linear-gradient(135deg,#2563eb,#1e40af);
   display:flex;
   flex-direction:column;
-  justify-content:flex-end;
+  justify-content:center;
   align-items:center;
+  gap:10px;
+}
+
+.hero img{
+  max-width:220px;
+  max-height:140px;
+  object-fit:contain;
+  background:#ffffff;
+  padding:10px;
+  border-radius:12px;
 }
 
 .hero p{
@@ -158,6 +163,7 @@ footer{
 
 <!-- HEADER -->
 <header class="hero">
+  <img src="logo.png" alt="SOSTECH Logo">
   <p>Reparamos la tecnología que mueve tu día</p>
 </header>
 
