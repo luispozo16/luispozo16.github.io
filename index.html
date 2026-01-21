@@ -19,23 +19,17 @@ body{
 
 /* ===== HEADER CON LOGO DE FONDO ===== */
 .hero{
-  min-height:320px;
+  height:260px;
   background-image:url("logo.png");
   background-repeat:no-repeat;
   background-position:center;
-  background-size:cover;
+  background-size:contain;
   display:flex;
-  flex-direction:column;
-  justify-content:flex-end;
-  align-items:center;
+  align-items:flex-end;
+  justify-content:center;
+  padding-bottom:15px;
 }
 
-.hero img{
-  width:90%;
-  max-width:420px;
-  height:auto;
-  object-fit:contain;
-}
 
 .hero p{
   margin:0;
@@ -163,9 +157,9 @@ footer{
 
 <!-- HEADER -->
 <header class="hero">
-  <img src="logo.png" alt="SOSTECH Logo">
   <p>Reparamos la tecnología que mueve tu día</p>
 </header>
+
 
 <!-- SERVICIOS -->
 <section>
