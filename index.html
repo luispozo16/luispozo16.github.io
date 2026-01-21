@@ -5,75 +5,75 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>SOSTECH | Servicio Técnico</title>
 
+<!-- ICONOS -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
 body{
   margin:0;
-  font-family:Arial,Helvetica,sans-serif;
+  font-family:Arial, Helvetica, sans-serif;
   background:#0f172a;
   color:#e5e7eb;
   text-align:center;
 }
 
-/* HEADER / LOGO */
+/* ===== HEADER CON LOGO DE FONDO ===== */
 .hero{
   height:260px;
-  display:flex;
-  align-items:flex-end;
-  justify-content:center;
-  padding-bottom:18px;
-
   background:
     linear-gradient(135deg,#2563eb,#1e40af),
     url("logo.png");
-
   background-repeat:no-repeat;
   background-position:center;
   background-size:contain;
+  display:flex;
+  flex-direction:column;
+  justify-content:flex-end;
+  align-items:center;
 }
 
 .hero p{
   margin:0;
-  font-size:1.1em;
-  color:#fff;
-  background:rgba(0,0,0,.45);
-  padding:6px 14px;
-  border-radius:10px;
+  padding-bottom:15px;
+  font-size:1.2em;
 }
 
-/* SECCIONES */
+/* ===== SECCIONES ===== */
 section{
-  padding:35px 15px;
+  padding:40px 15px;
   max-width:1000px;
   margin:auto;
 }
 
 h2{
   color:#60a5fa;
-  margin-bottom:20px;
+  margin-bottom:25px;
 }
 
+/* ===== GRID ===== */
 .servicios{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-  gap:18px;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:20px;
 }
 
+/* ===== CARD ===== */
 .card{
   background:#1e293b;
-  padding:22px;
-  border-radius:14px;
-  box-shadow:0 8px 20px rgba(0,0,0,.35);
+  border-radius:16px;
+  box-shadow:0 8px 20px rgba(0,0,0,.4);
+  padding:25px;
   text-decoration:none;
   color:#e5e7eb;
   transition:.3s;
 }
 
-.card:hover{transform:scale(1.05)}
+.card:hover{
+  transform:scale(1.05);
+}
 
 .card i{
-  font-size:2em;
+  font-size:2.2em;
   color:#38bdf8;
   margin-bottom:10px;
 }
@@ -83,36 +83,40 @@ h2{
   margin-bottom:10px;
 }
 
-/* SLIDER */
+/* ===== SLIDER ===== */
 .slider{
   position:relative;
   height:220px;
+  padding:0;
   overflow:hidden;
 }
 
 .slider img{
   position:absolute;
+  inset:0;
   width:100%;
-  height:180px;
-  object-fit:contain;
-  border-radius:12px;
+  height:100%;
+  object-fit:cover;
+  object-position:center;
   opacity:0;
   transition:opacity 1s ease-in-out;
 }
 
-.slider img.active{opacity:1}
+.slider img.active{
+  opacity:1;
+}
 
 .slider h3{
   position:absolute;
   bottom:0;
   left:0;
   right:0;
-  background:rgba(0,0,0,.6);
-  padding:6px;
   margin:0;
+  padding:10px;
+  background:rgba(0,0,0,.6);
 }
 
-/* BOTONES FLOTANTES */
+/* ===== BOTONES FLOTANTES ===== */
 .floating{
   position:fixed;
   right:15px;
@@ -140,6 +144,7 @@ h2{
 .ig{background:#E1306C}
 .fb{background:#1877F2}
 
+/* ===== FOOTER ===== */
 footer{
   background:#020617;
   padding:15px;
@@ -151,10 +156,12 @@ footer{
 
 <body>
 
+<!-- HEADER -->
 <header class="hero">
   <p>Reparamos la tecnología que mueve tu día</p>
 </header>
 
+<!-- SERVICIOS -->
 <section>
 <h2>Servicios Técnicos</h2>
 <div class="servicios">
@@ -165,74 +172,93 @@ footer{
 </div>
 </section>
 
+<!-- RECARGAS -->
 <section>
 <h2>Recargas de Juegos</h2>
 <div class="servicios">
 
 <a class="card" target="_blank"
 href="https://wa.me/593979424814?text=Hola%20vengo%20de%20SOSTECH%20y%20deseo%20una%20recarga%20de%20Free%20Fire.%0AMi%20ID%20es%3A">
-<img src="freefire.png"><h3>Free Fire</h3></a>
+<img src="freefire.png">
+<h3>Free Fire</h3>
+</a>
 
 <a class="card" target="_blank"
 href="https://wa.me/593979424814?text=Hola%20vengo%20de%20SOSTECH%20y%20deseo%20una%20recarga%20de%20Roblox.%0AUsuario%3A%0AContrase%C3%B1a%3A">
-<img src="roblox.png"><h3>Roblox</h3></a>
+<img src="roblox.png">
+<h3>Roblox</h3>
+</a>
 
 <a class="card" target="_blank"
 href="https://wa.me/593979424814?text=Hola%20vengo%20de%20SOSTECH%20y%20deseo%20una%20recarga%20de%20Clash%20Royale.%0AUsuario%3A%0AContrase%C3%B1a%3A">
-<img src="clashroyale.png"><h3>Clash Royale</h3></a>
+<img src="clashroyale.png">
+<h3>Clash Royale</h3>
+</a>
 
 </div>
 </section>
 
+<!-- GALERÍA -->
 <section>
 <h2>Nuestro Trabajo</h2>
 <div class="servicios">
 
 <div class="card slider">
-<img src="g1-1.jpg" class="active">
-<img src="g1-2.jpg">
-<img src="g1-3.jpg">
-<h3>Computadoras y Laptops</h3>
+  <img src="g1-1.jpg" class="active">
+  <img src="g1-2.HEIC">
+  <img src="g1-3.jpg">
+  <h3>Computadoras y Laptops</h3>
 </div>
 
 <div class="card slider">
-<img src="g2-1.jpg" class="active">
-<img src="g2-2.jpg">
-<img src="g2-3.jpg">
-<h3>Motos Eléctricas</h3>
+  <img src="g2-1.jpg" class="active">
+  <img src="g2-2.jpg">
+  <img src="g2-3.jpg">
+  <img src="g2-4.jpg">
+  <img src="g2-5.jpg">
+  <img src="g2-6.jpg">
+  <img src="g2-7.HEIC">
+  <h3>Motos Eléctricas</h3>
 </div>
 
 <div class="card slider">
-<img src="g3-1.png" class="active">
-<img src="g3-2.png">
-<img src="g3-3.png">
-<h3>Electrodomésticos</h3>
+  <img src="g3-1.HEIC" class="active">
+  <img src="g3-2.png">
+  <img src="g3-3.png">
+  <h3>Electrónica en General</h3>
 </div>
 
 </div>
 </section>
 
-<footer>© 2025 SOSTECH | Servicio Técnico Especializado</footer>
+<footer>
+© 2025 SOSTECH | Servicio Técnico Especializado
+</footer>
 
+<!-- BOTONES FLOTANTES -->
 <div class="floating">
-<a class="float-btn wpp" target="_blank"
-href="https://wa.me/593979424814?text=Hola%20vengo%20de%20SOSTECH%20y%20deseo%20información">
-<i class="fa-brands fa-whatsapp"></i></a>
+  <a class="float-btn wpp" target="_blank"
+  href="https://wa.me/593979424814?text=Hola%20vengo%20de%20SOSTECH%20y%20deseo%20informaci%C3%B3n">
+  <i class="fa-brands fa-whatsapp"></i></a>
 
-<a class="float-btn ig" target="_blank" href="https://www.instagram.com/sostech.lp">
-<i class="fa-brands fa-instagram"></i></a>
+  <a class="float-btn ig" target="_blank"
+  href="https://www.instagram.com/sostech.lp">
+  <i class="fa-brands fa-instagram"></i></a>
 
-<a class="float-btn fb" target="_blank" href="https://www.facebook.com/sostechlp">
-<i class="fa-brands fa-facebook"></i></a>
+  <a class="float-btn fb" target="_blank"
+  href="https://www.facebook.com/sostechlp">
+  <i class="fa-brands fa-facebook"></i></a>
 </div>
 
+<!-- SCRIPT SLIDER -->
 <script>
 document.querySelectorAll('.slider').forEach(slider=>{
-  const imgs=slider.querySelectorAll('img');
-  let i=0;
+  const imgs = slider.querySelectorAll('img');
+  let i = 0;
+
   setInterval(()=>{
     imgs[i].classList.remove('active');
-    i=(i+1)%imgs.length;
+    i = (i + 1) % imgs.length;
     imgs[i].classList.add('active');
   },3000);
 });
