@@ -17,21 +17,32 @@ body{
   text-align:center;
 }
 
-/* HEADER */
+/* HEADER LIMPIO */
 header{
+  position:relative;
   background:linear-gradient(135deg,#2563eb,#1e40af);
-  padding:15px;
+  height:260px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  overflow:hidden;
 }
 
-.logo{
-  width:100%;
+/* LOGO */
+header img{
+  max-width:90%;
   max-height:180px;
   object-fit:contain;
 }
 
+/* SLOGAN */
 header p{
-  margin:10px 0 0;
-  font-size:1.1em;
+  position:absolute;
+  bottom:15px;
+  width:100%;
+  margin:0;
+  font-size:1.2em;
+  color:#e5e7eb;
 }
 
 /* SECCIONES */
@@ -57,7 +68,7 @@ h2{
 .card{
   background:#1e293b;
   border-radius:16px;
-  padding:20px;
+  padding:25px;
   box-shadow:0 8px 20px rgba(0,0,0,.4);
   transition:.3s;
 }
@@ -67,7 +78,7 @@ h2{
 }
 
 .card i{
-  font-size:2em;
+  font-size:2.2em;
   color:#38bdf8;
   margin-bottom:10px;
 }
@@ -81,8 +92,8 @@ h2{
 .slider{
   position:relative;
   height:220px;
-  padding:0;
   overflow:hidden;
+  padding:0;
 }
 
 .slider img{
@@ -150,7 +161,7 @@ footer{
 <body>
 
 <header>
-  <img src="logo.PNG" class="logo">
+  <img src="logo.png" alt="SOSTECH">
   <p>Reparamos la tecnología que mueve tu día</p>
 </header>
 
@@ -219,7 +230,6 @@ href="https://wa.me/593979424814?text=Hola%20vengo%20de%20SOSTECH%20y%20deseo%20
 © 2025 SOSTECH | Servicio Técnico Especializado
 </footer>
 
-<!-- BOTONES FLOTANTES -->
 <div class="floating">
 <a class="float-btn wpp" target="_blank"
 href="https://wa.me/593979424814?text=Hola%20vengo%20de%20SOSTECH%20y%20deseo%20informaci%C3%B3n">
